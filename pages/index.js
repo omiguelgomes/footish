@@ -1,11 +1,10 @@
 import Link from 'next/link';
+import Home from '/pages/home'
 
-export default function Home() {
+export default function Index() {
   return (
     <>
-      <h1 className="title">
-        Read <Link href="/profiles/profile">this page!</Link>
-      </h1>
+     <Home/>
     </>
   )
 }

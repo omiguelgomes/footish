@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import Header from './header'
+import Footer from './footer'
 //https://tailwindcomponents.com/components
 
 function MyApp({ Component, pageProps }) {
@@ -7,6 +8,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Header/>
       <Component {...pageProps} />
+      <Footer/>
     </>
   )
   
