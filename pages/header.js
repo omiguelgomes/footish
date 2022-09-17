@@ -37,7 +37,7 @@ export default function Header() {
                   <Image
                     width="70vw"
                     height="70vw"
-                    src="/../public/assets/footish-no-bg.png"
+                    src="/assets/footish-no-bg.png"
                     alt="Your Company"
                   />
                 </div>
@@ -77,7 +77,7 @@ export default function Header() {
                         className="rounded-full"
                         width="55vw"
                         height="55vw"
-                        src="/../public/assets/profile_photo.avif"
+                        src="/assets/profile_photo.avif"
                         alt="Your Profile"
                       />
                     </Menu.Button>

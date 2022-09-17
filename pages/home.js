@@ -4,13 +4,13 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <>
-      <div className="flex mx-auto my-10 bg-logo-pink-200 w-10/12 md:w-2/3 lg:w-3/5 items-center justify-center py-12 px-4 sm:px-6 lg:px-8 rounded-[40px]">
+      <div className="flex mx-auto m-10 bg-logo-pink-200 w-10/12 md:w-2/3 lg:w-3/5 items-center justify-center py-12 px-4 sm:px-6 lg:px-8 rounded-[40px]">
         <div className="w-full max-w-md space-y-8">
           <div className="flex justify-center">
             <Image
               width="200vw"
               height="200vw"
-              src="/../public/assets/footish-no-bg.png"
+              src="/assets/footish-no-bg.png"
               alt="Your Company"
             />
           </div>
