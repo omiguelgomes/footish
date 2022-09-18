@@ -6,7 +6,7 @@ function classNames(...classes) {
 
 export default function Footer() {
   return (
-      <footer class="p-4 bg-logo-pink-100 sm:p-6 dark:bg-gray-900 absolute bottom-0 w-full">
+      <footer class="p-4 bg-logo-pink-100 sm:p-6 dark:bg-gray-900 ">
           <div class="md:flex md:justify-between">
               <div class="mb-6 md:mb-0">
                   <a class="flex items-center">

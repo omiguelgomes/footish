@@ -77,7 +77,7 @@ export default function Header() {
                         className="rounded-full"
                         width="55vw"
                         height="55vw"
-                        src="/assets/profile_photo.avif"
+                        src="/assets/profile_photo.jpeg"
                         alt="Your Profile"
                       />
                     </Menu.Button>
