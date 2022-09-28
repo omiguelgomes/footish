@@ -4,8 +4,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <>
-      <div className="flex mx-auto m-10 bg-logo-pink-200 w-10/12 md:w-2/3 lg:w-3/5 items-center justify-center py-12 px-4 sm:px-6 lg:px-8 rounded-[40px]">
-        <div className="w-full max-w-md space-y-8">
+        <div className="w-full mx-auto max-w-md space-y-8 m-10 items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center">
             <Image
               width="200vw"
@@ -73,16 +72,21 @@ export default function Home() {
             <div>
               <button
                 type="submit"
-                className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >
+                className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                   <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
                 </span>
                 Sign in
               </button>
             </div>
+            <div
+              className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+              <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+                <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
+              </span>
+              Sign up
+          </div>
           </form>
-        </div>
       </div>
     </>
   )
