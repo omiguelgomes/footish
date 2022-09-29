@@ -10,13 +10,13 @@ export default function Post() {
                 <div class="w-10/12">
                     <div class="flex items-center justify-between">
                         <div class="gap-3.5	flex items-center ">
-                        <Image
-                            className="rounded-full"
-                            width="55vw"
-                            height="55vw"
-                            src="/assets/profile_photo.jpeg"
-                            alt="Your Profile"
-                        />
+                            <Image
+                                className="rounded-full"
+                                width="55vw"
+                                height="55vw"
+                                src="/assets/profile_photo.jpeg"
+                                alt="Your Profile"
+                            />
                             <div class="flex flex-col">
                                 <b class="mb-2 capitalize">sofia müller</b>
                                 <time datetime="06-08-21" class="text-gray-400 text-xs">06 August at 09.15 PM
