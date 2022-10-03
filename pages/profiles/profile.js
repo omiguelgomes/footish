@@ -1,14 +1,15 @@
-import Link from 'next/link';
 import Image from 'next/image'
 
-export default function Profile() {
+import clientPromise from "../../lib/mongodb";
+
+export default function Profile({allPosts}) {
     return (
         <>
             <div className="flex flex-row mb-20 lg:mx-10">
                 <div class="container mx-auto px-4">
                     <div class="flex flex-wrap justify-between mt-10 bx-0">
                         <div class="w-full lg:w-4/12 px-4 lg:order-1">
-                            <div class="flex justify-center pt-4 lg:pt-4 pt-8">
+                            <div class="flex justify-center lg:pt-4">
                                 <div class="p-2 text-center">
                                 <span class="text-2xl font-bold block uppercase tracking-wide">22</span><span class="text-sm text-blueGray-400">Friends</span>
                                 </div>
@@ -49,7 +50,7 @@ export default function Profile() {
                     <div class="mt-10 py-10 border-y border-blueGray-200 text-center">
                         <div class="flex flex-wrap justify-center">
                         <div class="w-full lg:w-9/12 px-4">
-                            <p class="mb-4 text-lg leading-relaxed">
+                            <p class="mb-4 text-md lg:text-lg leading-relaxed">
                             An artist of considerable range, Jenna the name taken by
                             Melbourne-raised, Brooklyn-based Nick Murphy writes,
                             performs and records all of his own music, giving it a
@@ -138,3 +139,24 @@ export default function Profile() {
         </>
       );
   };
+
+  //Usar getStaticProps faz com que a função seja executada em build. util para preparar recursos sem o cliente esperar
+  export async function getServerSideProps() {
+    
+    try {
+        const client = await clientPromise;
+        const db = client.db("test");
+ 
+        const posts = await db
+            .collection("posts")
+            .find({})
+            .limit(10)
+            .toArray();
+
+        return {
+            props: { posts: JSON.parse(JSON.stringify(posts)) },
+        };
+    } catch (e) {
+        console.error(e);
+    }
+  }
