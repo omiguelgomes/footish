@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { server } from '../index';
 
 export default function Profile({allUsers}) {
@@ -57,7 +58,7 @@ export default function Profile({allUsers}) {
                     </div>
                     <div class="container grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-6 mx-auto my-10 md:px-10">
                         <div className="hover:shadow-2xl scale-100 hover:scale-110 ease-in duration-300">
-                            <a href='/profiles/post'>
+                            <Link href='/profiles/post'>
                                 <Image
                                     className="rounded-2xl"
                                     layout="responsive"
@@ -66,10 +67,10 @@ export default function Profile({allUsers}) {
                                     src="/assets/feet.jpeg"
                                     alt="Your Profile" 
                                 />
-                            </a>
+                            </Link>
                         </div>
                         <div className="hover:shadow-2xl scale-100 hover:scale-110 ease-in duration-300">
-                            <a href='/profiles/post'>
+                            <Link href='/profiles/post'>
                                 <Image
                                     className="rounded-2xl"
                                     layout="responsive"
@@ -78,10 +79,10 @@ export default function Profile({allUsers}) {
                                     src="/assets/feet.jpeg"
                                     alt="Your Profile" 
                                 />
-                            </a>    
+                            </Link>
                         </div>
                         <div className="hover:shadow-2xl scale-100 hover:scale-110 ease-in duration-300">
-                            <a href='/profiles/post'>
+                            <Link href='/profiles/post'>
                                 <Image
                                     className="rounded-2xl"
                                     layout="responsive"
@@ -90,10 +91,10 @@ export default function Profile({allUsers}) {
                                     src="/assets/feet.jpeg"
                                     alt="Your Profile" 
                                 />
-                            </a>    
+                            </Link>
                         </div>
                         <div className="hover:shadow-2xl scale-100 hover:scale-110 ease-in duration-300">
-                            <a href='/profiles/post'>
+                            <Link href='/profiles/post'>
                                 <Image
                                     className="rounded-2xl"
                                     layout="responsive"
@@ -102,10 +103,10 @@ export default function Profile({allUsers}) {
                                     src="/assets/feet.jpeg"
                                     alt="Your Profile" 
                                 />
-                            </a>    
+                            </Link>
                         </div>
                         <div className="hover:shadow-2xl scale-100 hover:scale-110 ease-in duration-300">
-                            <a href='/profiles/post'>
+                            <Link href='/profiles/post'>
                                 <Image
                                     className="rounded-2xl"
                                     layout="responsive"
@@ -114,10 +115,10 @@ export default function Profile({allUsers}) {
                                     src="/assets/feet.jpeg"
                                     alt="Your Profile" 
                                 />
-                            </a>    
+                            </Link>
                         </div>
                         <div className="hover:shadow-2xl scale-100 hover:scale-110 ease-in duration-300">
-                            <a href='/profiles/post'>
+                            <Link href='/profiles/post'>
                                 <Image
                                     className="rounded-2xl"
                                     layout="responsive"
@@ -126,7 +127,7 @@ export default function Profile({allUsers}) {
                                     src="/assets/feet.jpeg"
                                     alt="Your Profile" 
                                 />
-                            </a>    
+                            </Link>
                         </div>
                     </div>
                 </div>
