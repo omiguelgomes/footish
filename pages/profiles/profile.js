@@ -1,8 +1,7 @@
 import Image from 'next/image'
+import { server } from '../index';
 
-import clientPromise from "../../lib/mongodb";
-
-export default function Profile({allPosts}) {
+export default function Profile({allUsers}) {
     return (
         <>
             <div className="flex flex-row mb-20 lg:mx-10">
@@ -40,7 +39,7 @@ export default function Profile({allPosts}) {
                     </div>
                     <div class="text-center xl:mt-12">
                         <h3 class="text-4xl font-semibold leading-normal mb-2 mb-2">
-                            Jenna Stones
+                            {allUsers.map(user => {return user.name})}
                         </h3>
                         <div class="text-sm leading-normal mt-0 mb-2 font-bold uppercase">
                         <i class="fas fa-map-marker-alt mr-2 text-lg"></i>
@@ -51,11 +50,7 @@ export default function Profile({allPosts}) {
                         <div class="flex flex-wrap justify-center">
                         <div class="w-full lg:w-9/12 px-4">
                             <p class="mb-4 text-md lg:text-lg leading-relaxed">
-                            An artist of considerable range, Jenna the name taken by
-                            Melbourne-raised, Brooklyn-based Nick Murphy writes,
-                            performs and records all of his own music, giving it a
-                            warm, intimate feel with a solid groove structure. An
-                            artist of considerable range.
+                            {allUsers.map(user => {return user.profile_description})}
                             </p>
                         </div>
                         </div>
@@ -142,21 +137,23 @@ export default function Profile({allPosts}) {
 
   //Usar getStaticProps faz com que a função seja executada em build. util para preparar recursos sem o cliente esperar
   export async function getServerSideProps() {
-    
-    try {
-        const client = await clientPromise;
-        const db = client.db("test");
- 
-        const posts = await db
-            .collection("posts")
-            .find({})
-            .limit(10)
-            .toArray();
 
+    let response = await fetch(server + '/api/users', {
+        method: 'GET',
+    });
+
+    let data = await response.json();
+
+    let data_json = JSON.parse(JSON.stringify(data["message"]));
+
+    if(data['success'])
+    {
         return {
-            props: { posts: JSON.parse(JSON.stringify(posts)) },
+            props: { allUsers: data_json},
         };
-    } catch (e) {
-        console.error(e);
+    }
+    else
+    {
+        return {props: {allUsers: []}}
     }
   }
