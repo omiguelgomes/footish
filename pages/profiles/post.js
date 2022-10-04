@@ -18,7 +18,9 @@ export default function Post() {
                                 alt="Your Profile"
                             />
                             <div class="flex flex-col">
-                                <b class="mb-2 capitalize">sofia müller</b>
+                                <Link href='/profiles/profile'>
+                                    <b class="mb-2 capitalize">sofia müller</b>
+                                </Link>
                                 <time datetime="06-08-21" class="text-xs">06 August at 09.15 PM
                                 </time>
                             </div>

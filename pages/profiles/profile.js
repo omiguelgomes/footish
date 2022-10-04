@@ -9,7 +9,7 @@ export default function Profile({allUsers}) {
                 <div class="container mx-auto px-4">
                     <div class="flex flex-wrap justify-between mt-10 bx-0">
                         <div class="w-full lg:w-4/12 px-4 lg:order-1">
-                            <div class="flex justify-center lg:pt-4">
+                            <div class="flex justify-between lg:pt-4">
                                 <div class="p-2 text-center">
                                 <span class="text-2xl font-bold block uppercase tracking-wide">22</span><span class="text-sm text-blueGray-400">Friends</span>
                                 </div>
@@ -31,7 +31,7 @@ export default function Profile({allUsers}) {
                             />
                         </div>
                         <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-end">
-                            <div class="py-6 px-3 mt-0 flex justify-center lg:justify-end">
+                            <div class="py-6 sm:mt-0 px-3 mt-0 flex justify-center lg:justify-end">
                                 <button class="bg-pink-500 active:bg-pink-600 uppercase text-white font-bold hover:shadow-md shadow text-lg px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
                                     Connect
                                 </button>

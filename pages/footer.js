@@ -14,7 +14,14 @@ export default function Footer() {
                       src="/assets/footish-no-bg.png"
                       alt="Your Company"
                     />
-                      <span class="self-center ml-6 text-2xl font-semibold whitespace-nowrap dark:text-white">Footish</span>
+                    <div className="ml-6 mt-5">
+                        <Image
+                        width="170vw"
+                        height="40vw"
+                        src="/assets/footish-text.png"
+                        alt="Your Company"
+                        />
+                    </div>
                   </a>
               </div>
           </div>

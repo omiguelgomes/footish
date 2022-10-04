@@ -8,8 +8,8 @@ export default function Home() {
         <div className="w-full mx-auto max-w-md space-y-8 m-10 items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center">
             <Image
-              width="200vw"
-              height="200vw"
+              width="230vw"
+              height="230vw"
               src="/assets/footish-no-bg.png"
               alt="Your Company"
             />
